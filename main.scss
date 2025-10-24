@@ -1,0 +1,19 @@
+$myColor: salmon;
+$Fonts: arial, Poppins;
+
+header {
+    background-color: $myColor;
+    border-radius: 10px;
+    justify-content: center;
+    justify-items: center;
+    padding: 20px;
+    h1 {
+        font-size: 2rem;
+        justify-content: center;
+        font-family: $Fonts;
+    }
+
+    p {
+        color: $myColor;
+    }
+}

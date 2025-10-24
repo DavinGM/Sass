@@ -1,0 +1,15 @@
+header {
+  background-color: salmon;
+  border-radius: 10px;
+  justify-content: center;
+  justify-items: center;
+  padding: 20px;
+}
+header h1 {
+  font-size: 2rem;
+  justify-content: center;
+  font-family: arial, Poppins;
+}
+header p {
+  color: salmon;
+}/*# sourceMappingURL=main.css.map */
