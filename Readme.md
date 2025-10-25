@@ -77,37 +77,3 @@ sass source/stylesheets/index.scss build/stylesheets/index.css
 Kunjungi [situs web Sass](https://sass-lang.com/guide) untuk panduan tentang cara
 mempelajari Sass!
 
-## Repositori Ini
-
-Repositori ini bukan implementasi Sass. Implementasi tersebut terdapat di
-[`sass/dart-sass`] dan [`sass/libsass`]. Sebaliknya, repositori ini berisi:
-
-[`sass/dart-sass`]: https://github.com/sass/dart-sass
-[`sass/libsass`]: https://github.com/sass/libsass
-
-* [`spec/`], yang berisi spesifikasi untuk fitur bahasa.
-* [`proposal/`], yang berisi proposal yang sedang diproses untuk perubahan bahasa
-.
-* [`accepted/`], yang berisi proposal yang telah diterima dan sedang
-diimplementasikan atau sedang dalam proses implementasi.
-
-[`spec/`]: https://github.com/sass/sass/tree/main/spec
-[`proposal/`]: https://github.com/sass/sass/tree/main/proposal
-[`accepted/`]: https://github.com/sass/sass/tree/main/accepted
-
-Perlu diketahui bahwa ini tidak berisi spesifikasi lengkap Sass. Sebagai gantinya, spesifikasi
-fitur ditulis sesuai kebutuhan ketika fitur baru sedang dirancang atau
-ketika implementor membutuhkan kejelasan tambahan tentang cara kerja
-sesuatu. Ini berarti banyak spesifikasi dalam `spec/` hanya mencakup sebagian kecil dari
-fitur yang dimaksud.
-
-### Kebijakan Versi
-
-Proposal dalam repositori ini telah diversikan, untuk memudahkan pelacakan perubahan
-dari waktu ke waktu dan untuk merujuk ke versi yang lebih lama. Setiap versi memiliki tag Git dengan format `proposal.<nama>.draft-<versi>`. Versi baru harus dibuat untuk setiap
-kumpulan perubahan.
-
-Setiap versi memiliki versi mayor, dan mungkin juga memiliki versi minor
-(ditunjukkan `<mayor>.<minor>`). Versi minor harus ditingkatkan untuk
-perubahan yang tidak memengaruhi semantik proposal yang dimaksud; jika tidak,
-versi mayor harus ditingkatkan.

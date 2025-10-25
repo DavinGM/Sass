@@ -1,0 +1,217 @@
+//  
+
+//  ## Mendaftarkan Selector di Scss ##
+
+// Cerita nya kita mau kasih Style ke 4 elements yang ada pada index.html
+// yaitu h1 ,p
+
+// memberi jarak pada Huruf lorem
+
+//===[css]=================================
+// h1, p {
+//     letter-spacing: 1px;
+// }
+//=====================================
+
+// tapi bagai mana jika kita punya elemnts itu lebih dari 4 dan
+// di tempatkan di posisi berbeda dan hanya ingin menerepakan ke 2 pasang aja 
+// main dan Footer aja
+
+// Veris Css sebelum nya
+
+//==[Css]==============================================
+// .main h1, main p, footer h1, footer p,{
+//     //
+// }
+//==================================================
+
+
+// kalau pakai Scss
+//==[scss]=============================================
+// .main, footer {
+//     h1, p {
+//         letter-spacing: 1px;
+//     }
+// }
+//======================================================
+
+// coba teman teman lihta di main.css hasil nya sama dengan Css
+// Veris awal detail nya kamu coba lihta di books > Nesting > selector
+
+
+
+
+// ##karakter (dan) atau empersen (&) ##
+// ini yang di sebut dengan perrent selector
+// maksdu nya jadi kita bisa menarget element perrent pada saat
+// kita melakukan nesting contoh nya :
+
+//==[scss]=========================================
+// .main {
+//     .main-heading {
+//         font-size: 2em;
+//     }
+// }
+//==================================================
+
+// maka dia akan mentarget elemnts di dalamnya
+// atau childe perrents nya 
+// nah bagai mana kita mau mentarget elemnts container tapi
+// masih di dalem main? kan enggak bisa di tulis langusng seperti ini 
+
+//==[scss]===========================================
+// .main {
+//     .container {
+//         background-color: aquamarine;
+//     }
+//     .main-heading {
+//         font-size: 2em;
+//     }
+// }
+//===================================================
+
+// karena container itu bukan turunan dari class main nah jadi kita
+// tinggal tambahkan (dan) == (&)
+
+//==[scss]==============================================
+// .main {
+//     .container & {
+//         background-color: aquamarine;
+//     }
+//     .main-heading {
+//         font-size: 2em;
+//     }
+// }
+//========================================================
+
+// maka hasil nya container akan selngkah lebih maju di banding dengan main 
+
+//==[css]=================================================
+// .container .main {
+//   background-color: aquamarine;
+// }
+// .main .main-heading {
+//   font-size: 2em;
+// }/*# sourceMappingURL=main.css.map */
+//=========================================================
+
+
+// nah terus fungsi nya apa bang? kan ada di luar sekalian aja di luar kalau gitu mah
+// eits ini di gunakan Khusus jika sebuah Property di anggap bagian dari suatu class yang
+// posisi nya ada di diluar class itu sediri 
+
+
+
+// ## bukan hanya sebagai Perrent selector tanda (dan) == (&) juga ##
+// dapat di gunakan untuk membuat sudo class
+
+//==[scss]======================================================
+// .main {
+//     .container & {
+//         background-color: aquamarine;
+//     }
+//     .main-heading {
+//         font-size: 2em;
+//     }
+
+//     &:hover {
+//         background-color: salmon;
+//     }
+// }
+//================================================================
+
+// maka hasil dari output nya akan seperti ini
+
+//==[css]=====================================================
+// .main:hover {
+//   background-color: salmon;
+// }/*# sourceMappingURL=main.css.map */
+//======================================================
+
+
+
+
+
+
+
+
+// ## yang paling keren kita bisa mengeneted nama Perrent nya maksud nya gimana? ##
+
+//==[scss]=====================================================
+// .main {
+//     .main-heading {
+
+//     }
+//     .main-paragraph {
+
+//     }
+// }
+//==========================================================
+
+
+
+// kalau di perharikan kita banyak menuliskan main- di setiap
+// class cilde nya tentu saja ini akan sanggat merepotkan jikalau
+// kita punya lebih banyak nama class di dalam nya nah di sniilah 
+// genreted berfungsi 
+
+// ==[scss]============================================
+// .main {
+//     &-heading {
+//         font-size: 2em;
+//     }
+//     &-paragraph {
+//         font-size: 1.4em;
+//     }
+// }
+// ==============================================
+
+// hasil outup nya 
+
+//===[css]=============================================
+// .main-heading {
+//   font-size: 2em;
+// }
+// .main-paragraph {
+//   font-size: 1.4em;
+// }/*# sourceMappingURL=main.css.map */
+//================================================
+
+//tetap sama dengan sebelum nya mantap 👍
+
+
+
+
+// bang nesting nya ilang 😮🫵. eits tenang dulu kamu bisa edit kaya gini
+
+//====[scss]=================================================
+.main {
+    & &-heading {
+        font-size: 2em;
+    }
+    & &-paragraph {
+        font-size: 1.4em;
+    }
+
+    .footer {
+        & &-heading{
+            font-size: 2em;
+        }
+
+        & &-paragraph {
+            font-size: 1.4em;
+        }
+    }
+}
+//==========================================================
+
+// makahasil output nya 
+
+//==[css]===============================================
+// .main .main-heading {
+//   font-size: 2em;
+// }
+// .main .main-paragraph {
+//   font-size: 1.4em;
+// }/*# sourceMappingURL=main.css.map */
+//=====================================================
