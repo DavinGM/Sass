@@ -17,6 +17,7 @@ $primary-color: #333;
 
 body {
   font: 100% $font-stack;
+
   color: $primary-color;
 }
 
@@ -77,3 +78,6 @@ sass source/stylesheets/index.scss build/stylesheets/index.css
 Kunjungi [situs web Sass](https://sass-lang.com/guide) untuk panduan tentang cara
 mempelajari Sass!
 
+## Lisensi
+
+Jika Anda ingin mengkloning proyek ini, pastikan lisensi dan izin telah diberikan oleh pembuatnya. Silakan hubungi davin.gm.etc@gmail.com Proyek ini berada di bawah naungan (Etc.). Semua hak dan kebijakan privasi akan ditindaklanjuti oleh perusahaan.
